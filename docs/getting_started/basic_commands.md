@@ -21,6 +21,7 @@ $ docker-compose run --rm django python manage.py dumpdata --natural-foreign --i
 -e contenttypes -e auth.permission -e users.user \
 -e wagtailcore.groupcollectionpermission \
 -e wagtailcore.grouppagepermission -e wagtailimages.rendition \
+-e wagtailcore.revision \
 -e sessions > districtrcms/client/fixtures/data.json
 ```
 
