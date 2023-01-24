@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=districtrcms
+POSTGRES_USER=PMCABCxXxEypANEEjyOvbFuhHAnRlvyZ
+POSTGRES_PASSWORD=r7FhCpQSYVCqeIQFanJOsVIoNn9a3BaoFIrSGZS8TTRJsWCCsjmIcHG9Wrwe66uc
