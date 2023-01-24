@@ -2,9 +2,6 @@
 
 Wagtail CMS and API for the Districtr Site
 
-[[file:3CE3A35C-9A98-4FC0-A446-90C83B2FD78E-503-00000965C7F36E7E/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter]Built with Cookiecutter Django](https://github.com/cookiecutter/cookiecutter-django/)
-[[file:68381B41-0D05-4CE1-B2D5-E981CF0E8468-503-00000965C7FF9496/code%20style-black-000000.svg]Black code style](https://github.com/ambv/black)
-
 License: MIT
 
 ## Introduction
