@@ -53,7 +53,7 @@ class Command(BaseCommand):
                             "layout": '{"visibility": "visible"}',
                             "paint": '{"line-color": "#777777","line-width": ["interpolate", ["linear"], ["zoom"], 0, 0, 7, 1],"line-opacity": 0.8}',
                             "filter": "{}",
-                            "is_interactive": True,
+                            "is_interactive": False,
                         }
                     )
 
@@ -155,18 +155,19 @@ class Command(BaseCommand):
                     problem_bounds = None
                     for unit in item["units"]:
                         problem_bounds = unit["bounds"]
+
+                        if place_name:
+                            name = "{} - {} - {}".format(
+                                state, place_name, unit["name"]
+                            )
+                        else:
+                            name = "{} - {}".format(state, unit["name"])
+
                         if unit["tilesets"]:
                             for tileset in unit["tilesets"]:
                                 source_layer = tileset["sourceLayer"]
 
                                 # if the item has a name, use it. Create a location name = state + unit name
-
-                                if place_name:
-                                    name = "{} - {} - {}".format(
-                                        state, place_name, unit["name"]
-                                    )
-                                else:
-                                    name = "{} - {}".format(state, unit["name"])
 
                                 source_url = tileset["source"]["url"]
 

@@ -3,6 +3,7 @@ from django.contrib.postgres.operations import CreateExtension
 from django.db import migrations
 from django.http import HttpResponseRedirect
 from rest_framework import serializers
+from rest_framework.fields import DictField, FloatField, ListField
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel
 from wagtail.api import APIField
 from wagtail.core import blocks
@@ -96,7 +97,7 @@ class MapIndexPage(Page):
     class Meta:
         verbose_name = "Map Index Page"
 
-    page_description = "This is the map index page. It indexs problems relate to itself and other child indexes."
+    page_description = "This is the map index page. It indexs problems related to itself and other child indexes."
 
     body = RichTextField(blank=True)
 
@@ -214,9 +215,20 @@ class MapDetailPage(Page):
         APIField("unit_type"),
         APIField("unit_name"),
         APIField("unit_name_plural"),
-        APIField("bounds_sw"),
-        APIField("bounds_ne"),
+        APIField("bounds"),
+        # APIField("parent_page"),
     ]
+
+    @property
+    def bounds(self):
+        return [
+            [self.bounds_sw.x, self.bounds_sw.y],
+            [self.bounds_ne.x, self.bounds_ne.y],
+        ]
+
+    @property
+    def parent_page(self):
+        return self.get_parent().specific
 
     def serve(self, request):
 

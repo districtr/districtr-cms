@@ -12,8 +12,8 @@ Districtr is the open-source web app that empowers all people to draw districtin
 
 This platform is part of a suite of programs that create Districtr.org.
 
-- mapbox-gl-districtr: A Mapbox extension and tool library for drawing districting plans.
-- districtr-client: The Districtr site built on Gatsby
+- [districtr-mapbox-gl](https://github.com/districtr/districtr-mapbox-gl): A Mapbox extension and tool library for drawing districting plans.
+- [districtr-site](https://github.com/districtr/districtr-site): The Districtr site built on Gatsby
 - Other Districtr and MGGG data tools
 
 ## Getting Started
@@ -25,7 +25,7 @@ This project uses Docker and Docker Compose for development and production deplo
 ### Quick Start
 
 ```bash
-$ git clone [this repository]
+$ git clone https://github.com/districtr/districtr-cms.git
 $ cd districtrcms
 $ docker-compose -f local.yml build
 $ docker-compose -f local.yml up

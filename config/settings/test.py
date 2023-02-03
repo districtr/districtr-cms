@@ -31,3 +31,4 @@ TEMPLATES[0]["OPTIONS"]["debug"] = True  # type: ignore # noqa F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+ALLOWED_HOSTS = ["*"]
